@@ -1,0 +1,9 @@
+<app-loading *ngIf="loading && !error"></app-loading>
+
+<div class="alert alert-warning mt-5" role="alert" *ngIf="error">
+  <h3>Error</h3>
+  <hr>
+  <p> {{errorCatch}}</p>
+  </div>
+
+<app-cards [items]="newRelases"></app-cards>
