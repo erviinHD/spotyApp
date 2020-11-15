@@ -23,6 +23,8 @@ export class HomeComponent {
   getNewRelases() {
     this._spotifyServices.getNewRelases().subscribe(data => {
       this.newRelases = data;
+      console.log(this.newRelases);
+      
       this.loading = false;
     },(error)=>{
       this.error = true;
